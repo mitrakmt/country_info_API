@@ -1,0 +1,27 @@
+{
+  "name": "country-info-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitrakmt/country_info_API.git"
+  },
+  "author": "Michael Mitrakos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitrakmt/country_info_API/issues"
+  },
+  "homepage": "https://github.com/mitrakmt/country_info_API#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "helmet": "^3.5.0",
+    "moment": "^2.18.0",
+    "morgan": "^1.8.1"
+  }
+}
