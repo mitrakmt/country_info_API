@@ -16,12 +16,17 @@
   "bugs": {
     "url": "https://github.com/mitrakmt/country_info_API/issues"
   },
+  "engines": {
+    "node": "6.9.5"
+  },
   "homepage": "https://github.com/mitrakmt/country_info_API#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "helmet": "^3.5.0",
     "moment": "^2.18.0",
-    "morgan": "^1.8.1"
+    "morgan": "^1.8.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
   }
 }
