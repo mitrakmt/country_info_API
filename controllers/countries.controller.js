@@ -1,11 +1,28 @@
 const countriesController = {}
+const countriesModel = require('../models/countries.model')
 
-countriesController.getCountryDescription = (req, res) => {
-    res.status(200).send({
-        country: 'Thailand',
-        countryCode: 'TH',
-        description: 'A country on Southeast Asia’s Indochina peninsula known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha, a revered symbol.'
-    })
+countriesController.getCountry = (req, res) => {
+    let code = req.params.countryCode
+
+    countriesModel.getCountry(code)
+        .then(country => {
+            res.status(200).send(country)
+        })
+}
+
+countriesController.addCountry = (req, res) => {
+    let name = req.body.name
+    let code = req.body.code
+    let description = req.body.description
+    let gdp = req.body.gdp
+    let area = req.body.area
+    let population = req.body.population
+    let neighbors = req.body.neighbors
+
+    countriesModel.addCountry(name, code, description, gdp, area, population, neighbors)
+        .then(country => {
+            res.status(200).send(country)
+        })
 }
 
 module.exports = countriesController

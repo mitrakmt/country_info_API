@@ -3,7 +3,8 @@ const app = express()
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const helmet = require('helmet')
-const PORT = process.env.PORT || 8000
+let db = require('./db')
+const PORT = process.env.PORT || 7000
 
 const rootRouter = require('./routers')
 
