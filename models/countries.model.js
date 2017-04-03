@@ -15,13 +15,14 @@ countriesModel.getCountry = (code) => {
         })
 }
 
-countriesModel.addCountry = (name, code, description, gdp, area, population, neighbors) => {
+countriesModel.addCountry = (name, code, description, gdp, area, population, neighbors, capital) => {
     let addCountry = new Promise((resolve, reject) => {
         Countries.create({
             name: name,
             code: code,
             description: description,
             gdp: gdp,
+            capital: capital,
             area: area,
             population: population,
             neighbors: neighbors

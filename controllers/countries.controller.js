@@ -18,8 +18,9 @@ countriesController.addCountry = (req, res) => {
     let area = req.body.area
     let population = req.body.population
     let neighbors = req.body.neighbors
+    let capital = req.body.capital
 
-    countriesModel.addCountry(name, code, description, gdp, area, population, neighbors)
+    countriesModel.addCountry(name, code, description, gdp, area, population, neighbors, capital)
         .then(country => {
             res.status(200).send(country)
         })

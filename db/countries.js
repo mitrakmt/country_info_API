@@ -7,7 +7,8 @@ var countriesSchema = new mongoose.Schema({
   area: {type: Number, required: true},
   population: {type: Number, required: true},
   gdp: {type: Number, required: true},
-  neighbors:  [String]
+  capital: {type: String, required: true},
+  neighbors: [String]
 })
 
 module.exports = mongoose.model('Countries', countriesSchema)
