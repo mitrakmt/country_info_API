@@ -6,6 +6,12 @@ countriesController.getCountry = (req, res) => {
 
     countriesModel.getCountry(code)
         .then(country => {
+            console.log('country', country);
+            if (!country) {
+                res.status(400).send({
+                    message: "Country code not found."
+                })
+            }
             res.status(200).send(country)
         })
 }

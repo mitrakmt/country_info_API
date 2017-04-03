@@ -11,6 +11,10 @@ countriesModel.getCountry = (code) => {
     })
 
     return getCountry.then(country => {
+            if (!country) {
+                return false
+            }
+        
             return country
         })
 }
