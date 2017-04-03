@@ -11,7 +11,6 @@ countriesModel.getCountry = (code) => {
     })
 
     return getCountry.then(country => {
-            console.log('country', country)
             return country
         })
 }
