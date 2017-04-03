@@ -15,9 +15,9 @@ db.once('open', () => {
   console.log('--' + moment().format('hh:mm:ss') + '--' + ' Database connection estabished')
 })
 
-Country.remove({}, (err) => {
-  if (err) return handleError(err);
-})
+// Country.remove({}, (err) => {
+//   if (err) return handleError(err);
+// })
 
 seed.forEach(country => {
     Country.create(country)

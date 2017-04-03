@@ -3,7 +3,7 @@ var mongoose = require('mongoose')
 var countriesSchema = new mongoose.Schema({
   name: {type: String, required: true},
   code: {type: String, required: true, unique: true},
-  description: {type: String, required: true},
+  description: mongoose.Schema.Types.Mixed,
   area: {type: Number, required: true},
   population: {type: Number, required: true},
   gdp: {type: Number, required: true},
